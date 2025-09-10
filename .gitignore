@@ -1,0 +1,24 @@
+# Node
+node_modules/
+*.log
+npm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build
+/dist/
+/build/
+
+# VS Code
+.vscode/
+
+# S3 deploy script
+sitemap.xml
+package-lock.json
+
+# Misc
+.env
+*.bak
+*.tmp

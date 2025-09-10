@@ -1,0 +1,10 @@
+{
+  "name": "alternic-website",
+  "version": "1.0.0",
+  "scripts": {
+    "deploy": "zsh deploy-s3.sh"
+  },
+  "devDependencies": {
+    "sitemap": "^8.0.0"
+  }
+}

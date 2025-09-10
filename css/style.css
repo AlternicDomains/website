@@ -149,8 +149,8 @@ h1, h2, h3, h4, h5, h6 {
   border-top: 1px solid #ced4da !important; }
 
 .site-footer {
-  padding-top: 17rem;
-  padding-bottom: 4rem;
+  padding-top: 4rem;
+  padding-bottom: 1rem;
   background: #333333; }
   .site-footer p {
     color: #8c8c8c; }
@@ -164,7 +164,9 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 10px; }
   .site-footer .footer-heading {
     font-size: 20px;
-    color: #fff; }
+    color: #fff;
+    margin-bottom: 0.5rem !important;
+  }
 
 .bg-text-line {
   display: inline;
