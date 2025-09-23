@@ -860,3 +860,32 @@ h1, h2, h3, h4, h5, h6 {
     /* Firefox 18- */
     color: #ccc;
     font-style: italic; }
+
+/* Page-specific override: allow the domain hero to size to its content
+   This targets the #home-section hero so the inner .row doesn't keep 100vh. */
+.site-blocks-cover#home-section,
+.site-blocks-cover#home-section > .container,
+.site-blocks-cover#home-section > .container > .row {
+  min-height: auto !important;
+  height: auto !important;
+}
+
+/* Keep some breathing room under the hero and push footer to bottom
+   when the page content is short. Targeting generally so other pages
+   aren't affected unexpectedly. */
+html, body {
+  height: 100%;
+}
+.site-wrap {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.site-blocks-cover#home-section {
+  padding-bottom: 4rem !important;
+  min-height: 50vh !important;
+  height: auto !important;
+}
+.site-footer {
+  margin-top: auto;
+}

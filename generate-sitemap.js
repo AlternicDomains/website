@@ -8,7 +8,6 @@ sitemap.write({ url: '/index.html', changefreq: 'daily', priority: 1.0 });
 sitemap.write({ url: '/contact.html', changefreq: 'monthly', priority: 0.8 });
 sitemap.write({ url: '/custody-domain.html', changefreq: 'monthly', priority: 0.8 });
 sitemap.write({ url: '/tokenisation-domain.html', changefreq: 'monthly', priority: 0.8 });
-sitemap.write({ url: '/tokenisation-domain-copy.html', changefreq: 'monthly', priority: 0.6 });
 // Add more pages as needed
 sitemap.end();
 
