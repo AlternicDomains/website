@@ -114,7 +114,10 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: none !important; }
 
 .site-section {
-  padding: 4.5em 0; }
+  padding: 4.5em 0;
+  background: #fff;
+  position: relative;
+  z-index: 1; }
   @media (min-width: 768px) {
     .site-section {
       padding: 7em 0; } }
@@ -484,7 +487,7 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 100;
   width: 100%; }
   .sticky-wrapper + .site-blocks-cover {
-    margin-top: 140px; }
+    margin-top: 180px; }
   .sticky-wrapper .site-navbar {
     background-color: #fff;
     -webkit-transition: .3s all ease;
@@ -521,7 +524,8 @@ h1, h2, h3, h4, h5, h6 {
   background-repeat: no-repeat;
   background-position: top;
   background-attachment: fixed;
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
   .site-blocks-cover.overlay {
     position: relative; }
     .site-blocks-cover.overlay:before {
@@ -590,7 +594,11 @@ h1, h2, h3, h4, h5, h6 {
         object-fit: cover; }
   .site-blocks-cover .intro {
     z-index: 3;
-    position: relative; }
+    position: relative;
+    padding-top: 60px; }
+    @media (max-width: 991.98px) {
+      .site-blocks-cover .intro {
+        padding-top: 40px; } }
     .site-blocks-cover .intro .heading {
       margin-left: -150px; }
       @media (max-width: 991.98px) {
@@ -888,4 +896,34 @@ html, body {
 }
 .site-footer {
   margin-top: auto;
+}
+
+/* Social Links */
+.social-links {
+  margin: 0;
+  padding: 0;
+}
+
+.social-links p {
+  margin-bottom: 0.75rem;
+  padding: 0;
+}
+
+.social-link {
+  color: #666;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+.social-link:hover {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.social-link i {
+  margin-right: 0.5rem;
+  width: 16px;
+  text-align: center;
 }
