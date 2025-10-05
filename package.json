@@ -5,6 +5,7 @@
     "deploy": "zsh deploy-s3.sh"
   },
   "devDependencies": {
-    "sitemap": "^8.0.0"
+    "sitemap": "^8.0.0",
+    "xml-formatter": "^3.6.7"
   }
 }

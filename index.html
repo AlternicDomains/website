@@ -207,7 +207,10 @@
         <div class="row text-center">
           <div class="col-md-12">
             Copyright &copy;
-            <script>document.write(new Date().getFullYear());</script> All rights reserved
+            <span id="year"></span> All rights reserved
+            <script>
+              document.getElementById('year').textContent = new Date().getFullYear();
+            </script>
             </p>
           </div>
         </div>

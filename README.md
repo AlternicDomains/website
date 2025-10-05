@@ -1,5 +1,7 @@
 # Alternic Website
 
+This is the source code of https://alternic.com website.
+
 ## Deploying to S3
 
 This project includes a deployment script to publish the website to the S3 bucket `alternic.com`.
@@ -10,12 +12,7 @@ This project includes a deployment script to publish the website to the S3 bucke
 
 ### Deployment Steps
 
-1. Open your terminal and navigate to the project directory:
-   ```
-   cd /Users/user/code/alternic/website
-   ```
-
-2. Run the deploy script:
+Run the deploy script:
    ```
    ./deploy-s3.sh
    ```
@@ -28,4 +25,9 @@ This project includes a deployment script to publish the website to the S3 bucke
 
 ---
 
-If you need help with AWS CLI setup or encounter any issues, please ask!
+## Contributing & Contact
+
+Contributions are welcome. To get in touch:
+
+- Telegram: https://t.me/alternic
+- X (Twitter): https://x.com/alternic

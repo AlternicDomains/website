@@ -19,7 +19,6 @@
     <meta name="description"
         content="Alternic provides corporate naming and online brand security services, helping companies protect their digital assets and trademarks.">
     <meta name="keywords" content="corporate naming, brand security, domain protection, cybersquatting, digital assets">
-    <link rel="canonical" href="https://alternic.com/">
 
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Alternic — Corporate naming and online brand security">
@@ -110,10 +109,10 @@
                                 <p id="content" class="lead mb-5" style="font-size: 1.5rem;"></p>
                                 <p class="mb-0">
                                     <a href="mailto:info@alternic.com?subject=Domain Inquiry" class="btn btn-primary btn-md mr-3">
-                                        Contact Us
+                                        info@alternic.com
                                     </a>
                                     <a href="/contact.html" class="btn btn-outline-primary btn-md">
-                                        Learn More
+                                        Contact Us
                                     </a>
                                 </p>
                             </div>
@@ -145,8 +144,10 @@
                 </div>
                 <div class="row text-center">
                     <div class="col-md-12">
-                        Copyright &copy;
-                        <script>document.write(new Date().getFullYear());</script> All rights reserved
+                        Copyright &copy; <span id="year"></span> All rights reserved
+                        <script>
+                          document.getElementById('year').textContent = new Date().getFullYear();
+                        </script>
                         </p>
                     </div>
                 </div>
@@ -161,14 +162,21 @@
     <script src="js/aos.js"></script>
     <script src="js/main.js"></script>
 
-    <!-- Domain Detection Script -->
+    <!-- Domain Detection & SEO Script -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Full path, e.g. /buy-domain/example.com
             const path = window.location.pathname;
-            
             // Extract whatever comes after "/buy-domain/"
             const domain = path.split("/buy-domain/")[1];
+
+            // Dynamically set canonical tag for SEO
+            if (domain) {
+                var canonical = document.createElement('link');
+                canonical.rel = 'canonical';
+                canonical.href = window.location.origin + '/buy-domain/' + domain;
+                document.head.appendChild(canonical);
+            }
 
             const titleElement = document.getElementById("title");
             const contentElement = document.getElementById("content");
@@ -177,7 +185,6 @@
             if (domain && titleElement && contentElement) {
                 titleElement.innerText = `${domain} is for sale`;
                 contentElement.innerText = `This domain name ${domain} is available for purchase. Contact us for pricing.`;
-                
                 // Update mailto subject with domain name
                 if (contactButton) {
                     contactButton.href = `mailto:info@alternic.com?subject=Inquiry for ${domain}`;
