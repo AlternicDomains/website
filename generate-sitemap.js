@@ -10,6 +10,7 @@ sitemap.write({ url: '/', changefreq: 'daily', priority: 1.0, lastmod: now });
 sitemap.write({ url: '/contact.html', changefreq: 'monthly', priority: 0.8, lastmod: now });
 sitemap.write({ url: '/custody-domain.html', changefreq: 'monthly', priority: 0.8, lastmod: now });
 sitemap.write({ url: '/tokenisation-domain.html', changefreq: 'monthly', priority: 0.8, lastmod: now });
+sitemap.write({ url: '/terms.html', changefreq: 'monthly', priority: 0.7, lastmod: now });
 // Add dynamic buy-domain URLs from buy-domains.txt
 try {
   const domains = readFileSync('./buy-domains.txt', 'utf-8')
@@ -20,7 +21,7 @@ try {
     sitemap.write({
       url: `/buy-domain/${domain}`,
       changefreq: 'monthly',
-      priority: 0.7,
+      priority: 0.6,
       lastmod: now
     });
   });
